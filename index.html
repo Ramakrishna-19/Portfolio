@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramakrishna | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Ramakrishna</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="ramakrishnaPic.png" alt="Ramakrishna" class="profile-pic">
+    <div class="hero-text">
+      <h2>Hello, I'm <span>Ramakrishna</span> 👋</h2>
+      <p>A passionate <b>Full-Stack Developer</b> exploring <b>Generative AI</b> & <b>Machine Learning</b>.</p>
+      <a href="#contact" class="btn">🚀 Hire Me</a>
+      <button class="btn">📄 Download Resume <a href = "ramakrishna_resume.pdf" download></a></button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>
+      I am a <b>MERN Stack Developer</b>, <b>Machine Learning enthusiast</b>, and currently exploring <b>Generative AI</b>.  
+      I am also a <b>Competitive Programmer</b> with strong problem-solving skills in <b>Data Structures & Algorithms</b>.  
+      My goal is to build impactful and scalable solutions.
+      A personal portfolio website built with HTML, CSS, and JavaScript, showcasing my skills, 500+ solved Data Structures & Algorithms problems, and 5+ full-stack/web development projects. It features a clean, modern, and responsive design with sections like About Me, Skills, Projects, and Contact, making it easy for visitors to explore my journey and connect with me.
+    </p>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section fade-in">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Google</h3>
+      <p><b>AI/ML Internship</b> (May-June-2024)</p>
+      <p>
+        Developed scalable ML models and integrated AI-powered solutions with production-ready pipelines.  
+        Worked on <b>Generative AI research</b>, <b>NLP applications</b>, and optimized model performance for real-world systems.  
+        Collaborated with cross-functional teams to bring innovative AI features into products.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-box">MERN Stack</div>
+      <div class="skill-box">Machine Learning</div>
+      <div class="skill-box">Exploring Generative AI</div>
+      <div class="skill-box">Data Structures & Algorithms</div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section fade-in">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>Bachelor of Technology</h3>
+      <p><b>Computer Science & Engineering (Data Science)</b></p>
+      <p>Geethanjali College of Engineering and Technology | 2023 - 2026</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Todo List App <b> <a href="https://github.com/Ramakrishna-19/Todo-List-App" target="_blank" class="btn">View Project</a></b></h3>
+      <p>Developed a Todo List App using React and Node.js, allowing users to create, update, and delete tasks with a user-friendly interface.</p>
+    </div>
+    <div class="card">
+      <h3>DS Algo Visualizer   <b>  <a href="https://github.com/Ramakrishna-19/DS-Algo-Visualizer" target="_blank" class="btn">View Project</a></b><a href="https://algovisualizer-76b0f.web.app/" target="_blank" class="btn">Live</a></h3>
+      <p>Created a Data Structures and Algorithms visualizer using MERN Stack, helping users understand complex algorithms through interactive animations.</p>
+     
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section fade-in">
+    <h2>Contact Me</h2>
+    <p>Phone: <a href="tel:+1234567890">6305773050</a></p>
+    <p>📧 Email: <a href="mailto:ramakrishnadyavari1920@gmail.com">ramakrishnadyavari1920@gmail.com</a></p>
+    <p>🔗 GitHub: <a href="https://github.com/Ramakrishna-19" target="_blank">github.com/Ramakrishna-19</a></p>
+    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/ramakrishna-dyavari-a2669823b/" target="_blank">linkedin.com/in/ramakrishna-dyavari-a2669823b</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ramakrishna | Portfolio</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const options = { threshold: 0.3 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
